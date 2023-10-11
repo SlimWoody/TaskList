@@ -1,114 +1,104 @@
-/* Reset and base styles  */
-* {
-    padding: 0px;
-    margin: 0px;
-    border: none;
+html,
+body {
+    min-height: 100vh;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+body {
+    background-color: #e4e5e7;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.aside {
+    height: 400px;
+}
+.main {
+    height: 400px;
+}
+.d-flex {
+    display: flex;
+}
+.task-title {
+    font-weight: 400;
+    padding-top: 5px;
 }
 
-/* Links */
-
-a,
-a:link,
-a:visited {
-    text-decoration: none;
+.display-4{
+    font-weight: 700;
+    color : rgb(65, 57, 181);
 }
 
-a:hover {
-    text-decoration: none;
+.gray {
+    color: #cae9fa;
 }
-
-/* Common */
-
-aside,
-nav,
-footer,
-header,
-section,
-main {
-    display: block;
+.task-title--done {
+    text-decoration: line-through;
+    color: #b5fefd;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    font-size: inherit;
-    font-weight: inherit;
+.task-item__buttons {
+    display: flex;
+    column-gap: 5px;
 }
-
-ul,
-ul li {
-    list-style: none;
+.notify-holder {
+    height: 60px;
+    margin-bottom: 20px;
 }
-
-img {
-    vertical-align: top;
+.empty-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
-
-img,
-svg {
-    max-width: 100%;
-    height: auto;
+.empty-list__title {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 300;
 }
-
-address {
-    font-style: normal;
+.empty-list__icon {
+    color: #42be2a;
+    font-size: 32px;
 }
-
-/* Form */
-
-input,
-textarea,
-button,
-select {
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-    background-color: transparent;
-}
-
-input::-ms-clear {
-    display: none;
-}
-
-button,
-input[type="submit"] {
-    display: inline-block;
-    box-shadow: none;
-    background-color: transparent;
-    background: none;
+.btn-action {
+    background-color: #e0e5ea;
+    padding: 8px 10px;
     cursor: pointer;
-}
-
-input:focus,
-input:active,
-button:focus,
-button:active {
-    outline: none;
-}
-
-button::-moz-focus-inner {
-    padding: 0;
     border: 0;
+    border-radius: 4px;
+    transition: opacity 0.2s ease-in;
+    opacity: 0.5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-label {
-    cursor: pointer;
+.btn-action:hover {
+    background-color: #e0e5ea;
+    opacity: 1;
 }
 
-legend {
-    display: block;
+.btn-action img {
+    pointer-events: none;
 }
 
-body{
-    font-family: 'PT Sans', sans-serif;
+.none {
+    display: none !important;
+}
+
+.float-right {
+    float: right;
+}
+.copyright {
+    margin-top: 40px;
+    font-size: 14px;
+    color: gray;
+    text-align: center;
+    margin-bottom: 30px;
+    /* position: absolute; */
+    /* bottom: 30px; */
+    /* left: 0; */
+    /* right: 0; */
 }
