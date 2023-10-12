@@ -19,9 +19,19 @@ body {
 .d-flex {
     display: flex;
 }
+
+.data-box{
+    font-size: 14px;
+    width: 150px;
+    font-weight: 500;
+    padding-top: 5px;
+    margin: 10px;
+}
+
 .task-title {
     font-weight: 400;
     padding-top: 5px;
+    margin: 10px;
 }
 
 .display-4{
@@ -62,6 +72,7 @@ body {
     font-size: 32px;
 }
 .btn-action {
+    margin-top: 10px;
     background-color: #e0e5ea;
     padding: 8px 10px;
     cursor: pointer;
@@ -69,7 +80,7 @@ body {
     border-radius: 4px;
     transition: opacity 0.2s ease-in;
     opacity: 0.5;
-
+    max-height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
