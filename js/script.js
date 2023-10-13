@@ -54,7 +54,7 @@ function addTask(event) {
                             <img src="./img/cross.svg" alt="Done" width="18" height="18">
                         </button>
                         <button type="button" data-action="editing" class="btn-action">
-							<img src="./img/" alt="Editing" width="18" height="18">
+							<img src="./img/edit.svg" alt="Editing" width="18" height="18">
 						</button>
                     </div>
                 </li>`;
@@ -79,6 +79,10 @@ function addTask(event) {
 
 // Функция удаления задачи 
 function deleteTask(event) {
+    if(isEditTask){
+        alert('В данный момент это не возможно!');
+        return;
+    }
     // c помощью target отслеживаем элемент по которому происходит клик.
     if (event.target.dataset.action === 'delete') {
         const parenNode = event.target.closest('.list-group-item');
@@ -94,6 +98,11 @@ function deleteTask(event) {
 
 // Функция выполнения задачи 
 function doneTask(event) {
+    if(isEditTask){
+        alert('В данный момент это не возможно!');
+        return;
+    }
+    
     if (event.target.dataset.action === "done") {
         const parentNode = event.target.closest('.list-group-item');
         const taskTitle = parentNode.querySelector('.task-title'); // querySelector позволяет искать элемент по HTML 
